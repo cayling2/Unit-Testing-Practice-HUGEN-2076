@@ -26,13 +26,27 @@ test_that("ordinary values are unchanged", {
 test_that("upper and lower parameters work correctly", {
     #lower
     expect_equal(
-        clean_numeric(values = c(-10,-5,0,1,2), lower = 0), c(NA,NA,0,1,2)
+        clean_numeric(values = c(-10,-5,0,1,2), lower = 0), 
+        c(NA,NA,0,1,2)
     )
     #upper
     expect_equal(
-        clean_numeric(values = c(-100,-50,0,10,10^30), upper=Inf), c(-100,-50,0,10,10^30)
+        clean_numeric(values = c(-100,-50,0,10,10^30), upper=Inf), 
+        c(-100,-50,0,10,10^30)
     )
 })
+
+#bad test on purpose
+#test behavoir on empty input vector
+test_that("Function returns NA on empty input", {
+    expect_equal(
+        clean_numeric(values = c()), 
+        #would test TRUE==NA so want is.na(NA)==TRUE
+        TRUE
+    )    
+})
+
+
 
 
 
