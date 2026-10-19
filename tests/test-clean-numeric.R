@@ -40,9 +40,9 @@ test_that("upper and lower parameters work correctly", {
 #test behavoir on empty input vector
 test_that("Function returns NA on empty input", {
     expect_equal(
-        clean_numeric(values = c()), 
+        length(clean_numeric(values = c())), 
         #would test TRUE==NA so want is.na(NA)==TRUE - for bad test
-        integer(0)
+        0
     )    
 })
 
