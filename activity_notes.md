@@ -1,6 +1,6 @@
 # Activity notes
 
-GitHub username: YOURUSERNAME
+GitHub username: cayling2
 
 ## Before the code change
 
