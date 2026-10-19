@@ -41,8 +41,8 @@ test_that("upper and lower parameters work correctly", {
 test_that("Function returns NA on empty input", {
     expect_equal(
         clean_numeric(values = c()), 
-        #would test TRUE==NA so want is.na(NA)==TRUE
-        TRUE
+        #would test TRUE==NA so want is.na(NA)==TRUE - for bad test
+        integer(0)
     )    
 })
 
